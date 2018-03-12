@@ -1,4 +1,4 @@
-</div>
+                </div>
                 <!-- END APP CONTENT -->
 
             </div>
@@ -6,7 +6,6 @@
 
         </div>
         <!-- END APP WRAPPER -->
-
         <!-- START SCRIPTS -->
           <!-- <script type="text/javascript">
             $(document).ready(function(){
@@ -96,8 +95,6 @@
 
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/vendor/rickshaw/d3.v3.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/vendor/rickshaw/rickshaw.min.js"></script>
-
-        <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/vendor/isotope/isotope.pkgd.min.js"></script>
 
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/vendor/dropzone/dropzone.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/vendor/nestable/jquery.nestable.js"></script>

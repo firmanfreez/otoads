@@ -1,34 +1,36 @@
 <?php
 class A_wilayah extends CI_Controller{
   public function index(){
+    if (!$this->session->userdata('logged_in')) {
+      redirect('users/login');
+    }
     $data['title'] = 'DATA WILAYAH';
 
-    $data['kota'] = $this->M_awilayah->get_data();
+    $data['wilayah'] = $this->M_awilayah->get_data();
 
     $this->load->view('templates/header');
-    $this->load->view('wilayah/index', $data);
+    $this->load->view('wilayah/wilayah/index', $data);
     $this->load->view('templates/footer');
   }
-  public function edit($id_kota){
+  public function edit($id_wilayah){
+    if (!$this->session->userdata('logged_in')) {
+      redirect('users/login');
+    }
+      $data['wilayah'] = $this->M_awilayah->get_data($id_wilayah);
 
-      $data['kota'] = $this->M_awilayah->get_data($id_kota);
-      $data['wilayah'] = $this->M_awilayah->get_wilayah();
 
-      if (empty($data['kota'])) {
+      if (empty($data['wilayah'])) {
         show_404();
       }
-      $data['title'] = 'Edit Data Mobil';
+      $data['title'] = 'Edit Data Wilayah';
 
       $this->load->view('templates/header');
-      $this->load->view('wilayah/edit', $data);
+      $this->load->view('wilayah/wilayah/edit', $data);
       $this->load->view('templates/footer');
     }
   public function update(){
-    $this->M_awilayah->update_kota();
+    $this->M_awilayah->update_wilayah();
+    $this->session->set_flashdata('update_wilayah', 'Data Wilayah Berhasil di Edit');
     redirect('a_wilayah');
-    }
-    public function delete($id_kota){
-      $this->M_awilayah->delete($id_kota);
-      redirect('a_wilayah');
     }
   }

@@ -71,13 +71,37 @@ $route['a_check'] = 'a_check/index';
 $route['a_mobil/index'] = 'a_mobil/index';
 $route['a_mobil'] = 'a_mobil/index';
 
+$route['a_tipe/index'] = 'a_tipe/index';
+$route['a_tipe'] = 'a_tipe/index';
+
+$route['a_tahun/index'] = 'a_tahun/index';
+$route['a_tahun'] = 'a_tahun/index';
+
+$route['a_warna/index'] = 'a_warna/index';
+$route['a_warna'] = 'a_warna/index';
+
 $route['a_wilayah/index'] = 'a_wilayah/index';
 $route['a_wilayah/update'] = 'a_wilayah/update';
 $route['a_wilayah'] = 'a_wilayah/index';
 
+$route['a_kota/index'] = 'a_kota/index';
+$route['a_kota/update'] = 'a_kota/update';
+$route['a_kota'] = 'a_kota/index';
+
 $route['a_iklan/index'] = 'a_iklan/index';
+$route['a_iklan/update'] = 'a_iklan/update';
 $route['a_iklan/(:any)'] = 'a_iklan/detail/$1';
 $route['a_iklan'] = 'a_iklan/index';
+
+$route['a_perusahaan/index'] = 'a_perusahaan/index';
+$route['a_perusahaan/update'] = 'a_perusahaan/update';
+$route['a_perusahaan/(:any)'] = 'a_perusahaan/detail/$1';
+$route['a_perusahaan'] = 'a_perusahaan/index';
+
+$route['a_master_iklan/index'] = 'a_master_iklan/index';
+$route['a_master_iklan/update'] = 'a_master_iklan/update';
+$route['a_master_iklan/(:any)'] = 'a_master_iklan/detail/$1';
+$route['a_master_iklan'] = 'a_master_iklan/index';
 
 $route['users/index'] = 'users/index';
 $route['default_controller'] = 'page/view';

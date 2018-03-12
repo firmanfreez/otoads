@@ -1,8 +1,9 @@
 <!-- START PAGE CONTAINER -->
                     <div class="container">
-                      <div class="block block-condensed">
+                      <div class="block block-condensed block-info">
                             <!-- START HEADING -->
                             <div class="app-heading app-heading-small">
+                              <a href="<?php base_url(); ?>../../a_pembayaran"><button class="btn btn-info">Kembali</button></a>
                                     <center><h1 style="text-transform: uppercase;"><?= $title; ?></h1></center>
                             </div>
                             <!-- END HEADING -->
@@ -15,7 +16,7 @@
                                         <select class="bs-select col-md-10" name="id_transaksi">
                                           <option>Pilih Nama Pemakai</option>
                                           <?php foreach ($transaksi as $t) : ?>
-                                            <option value="<?php echo $t['id_transaksi']; ?>"><?php echo $t['nama_lengkap']; ?></option>
+                                            <option value="<?php echo $t['id_transaksi']; ?>" <?php if ($pembayaran['id_transaksi']==$t['id_transaksi']) {echo 'selected';} ?>><?php echo $t['nama_lengkap']; ?></option>
                                           <?php endforeach; ?>
                                         </select>
                                     </div>

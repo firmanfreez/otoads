@@ -39,6 +39,21 @@ class M_atransaksi extends CI_Model{
       $query = $this->db->get_where('data_transaksi', array('id_transaksi' => $id_transaksi));
       return $query->row_array();
   }
+  public function get_data_distance($id_transaksi){
+      $this->db->order_by('total_perjalanan', 'DESC');
+      $this->db->limit(1);
+
+      $query = $this->db->get_where('data_distance', array('id_transaksi' => $id_transaksi));
+      return $query->row_array();
+    }
+    public function get_data_check($id_transaksi){
+      $query = $this->db->get_where('check_in', array('id_transaksi' => $id_transaksi));
+      return $query->result_array();
+    }
+    public function get_data_pesan($id_transaksi){
+      $query = $this->db->get_where('data_pesan', array('id_transaksi' => $id_transaksi));
+      return $query->result_array();
+    }
   public function get_kendaraan(){
       $this->db->order_by('merk');
       $query = $this->db->get('kendaraan_data_master');
@@ -77,4 +92,14 @@ class M_atransaksi extends CI_Model{
     //                    ->get_where('wilayah_data_master', array('id_kota' => $id));
     //   return $data->result_array();
     // }
+    public function delete($id_transaksi){
+    $this->db->where('id_transaksi', $id_transaksi);
+    $this->db->delete('data_transaksi');
+    return true;
+    }
+    public function delete_pesan($id_pesan){
+      $this->db->where('id_pesan', $id_pesan);
+      $this->db->delete('data_pesan');
+      return true;
+    }
 }

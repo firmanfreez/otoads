@@ -38,7 +38,13 @@ class M_pribadi extends CI_Model{
         'nomor_telepon' => $this->input->post('nomor_telepon'),
         'pekerjaan' => $this->input->post('pekerjaan')
       );
-      return $this->db->insert('informasi_pribadi', $data);
+      $data2 = array(
+          'email' => $this->input->post('email'),
+          'password' => $password,
+        );
+
+      return $this->db->insert('data_transaksi', $data);
+      return $this->db->insert('login', $data);
 
       $this->output
             ->set_status_header(200)

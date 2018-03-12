@@ -1,8 +1,9 @@
 <!-- START PAGE CONTAINER -->
                     <div class="container">
-                      <div class="block block-condensed">
+                      <div class="block block-condensed block-info">
                             <!-- START HEADING -->
                             <div class="app-heading app-heading-small">
+                              <a href="<?php base_url(); ?>../../a_transaksi"><button class="btn btn-info">Kembali</button></a>
                                     <center><h1 style="text-transform: uppercase;"><?= $title; ?></h1></center>
                             </div>
                             <!-- END HEADING -->

@@ -3,6 +3,7 @@
                       <div class="block block-condensed">
                             <!-- START HEADING -->
                             <div class="app-heading app-heading-small">
+                              <a href="#" onclick="history.go(-1);"><button class="btn btn-info">Kembali</button></a>
                                     <center><h1 style="text-transform: uppercase;"><?= $title; ?></h1></center>
                             </div>
                             <!-- END HEADING -->

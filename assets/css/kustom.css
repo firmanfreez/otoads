@@ -1,0 +1,116 @@
+.hr-border{
+  border: 0.5px solid #4FB5DD;
+  width: 100%;
+}
+.app-blus {
+  float: left;
+  width: 100%;
+}
+.app-blus .item {
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  height: 50px;
+  border: 1px solid #DBE0E4;
+  border-bottom: 0px;
+}
+.app-blus .item .heading {
+  float: left;
+  width: 100%;
+  height: 50px;
+  background: #4fb5dd;
+  color: #fff;
+  padding: 0px 20px;
+  cursor: pointer;
+  -webkit-transition: background 100ms linear;
+  -moz-transition: background 100ms linear;
+  -ms-transition: background 100ms linear;
+  -o-transition: background 100ms linear;
+  transition: background 100ms linear;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.app-blus .item .heading .title {
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 50px;
+  margin: 0px;
+  padding: 0px;
+}
+.app-blus .item .heading:hover {
+  background: #F5F5F5;
+}
+.app-blus .item .content {
+  float: left;
+  width: 100%;
+}
+.app-blus .item .content .block {
+  padding: 15px;
+  border: 0px;
+}
+.app-blus .item.open .heading {
+  border-bottom: 1px solid #e8e8e8;
+  background: #F5F5F5;
+}
+.app-blus .item:first-child {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 5px;
+}
+.app-blus .item:last-child {
+  border-bottom: 1px solid #DBE0E4;
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 0px;
+}
+.app-blus.app-blus-simple .item.open {
+  height: auto;
+}
+.app .app-sidebar > .app-blus {
+  overflow-y: hidden;
+  background: #FFF;
+  border-left: 1px solid #DBE0E4;
+}
+.app .app-sidebar > .app-blus .item {
+  border-left: 0px;
+  border-right: 0px;
+}
+.app .label {
+  position: relative;
+  line-height: 14px;
+  padding: 3px 5px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
+  -ms-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
+  transition: all 100ms linear;
+}

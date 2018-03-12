@@ -26,10 +26,12 @@
                                             <td><?php echo $c['nama_lengkap']; ?></td>
                                             <td><?php echo $c['tanggal']; ?></td>
                                             <td><?php echo $c['waktu']; ?></td>
-                                            <td>
-                                              <center><p><a class="btn btn-primary" href="<?php echo site_url('/a_check/'.$c['id_check']); ?>"><span class="fa fa-eye" ></span></a></p></center>
-                                              <center><p><a class="btn btn-info" href="<?php echo site_url('/a_check/edit/'.$c['id_check']); ?>"><span class="fa fa-pencil" ></span></a></p></center>
-                                              <center><p><a class="btn btn-danger" href="<?php echo site_url('/a_check/'.$c['id_check']); ?>"><span class="fa fa-trash" ></span></a></p></center>
+                                            <td style="width: 23%;">
+                                              <center>
+                                              <a class="btn btn-primary" href="<?php echo site_url('/a_check/'.$c['id_check']); ?>"><span class="fa fa-eye" ></span></a>
+                                              <a class="btn btn-info" href="<?php echo site_url('/a_check/edit/'.$c['id_check']); ?>"><span class="fa fa-pencil" ></span></a>
+                                              <a class="btn btn-danger" href="<?php echo site_url('/a_check/delete/'.$c['id_check']); ?>"><span class="fa fa-trash" ></span></a>
+                                            </center>
                                             </td>
                                           </tr>
                                       <?php endforeach; ?>

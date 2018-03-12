@@ -8,67 +8,295 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+        <link rel="shortcut icon" href="favicon.png" >
         <!-- END META SECTION -->
         <!-- CSS INCLUDE -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/styles.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/kustom.css">
         <!-- EOF CSS INCLUDE -->
     </head>
     <body>
-
-        <!-- APP WRAPPER -->
-        <div class="app">
-
-            <!-- START APP CONTAINER -->
-            <div class="app-container">
-                <!-- START SIDEBAR -->
-                <div class="app-sidebar app-navigation  app-navigation-fixed app-navigation-style-default dir-left" data-type="close-other">
-                    <a href="index.html" class="app-navigation-logo"></a>
+      <div class="app">
+            <!-- START APP HEADER -->
+            <div class="app-header">
+                <ul class="app-header-buttons visible-mobile">
+                    <li><a href="#" class="btn btn-link btn-icon" data-header-navigation-toggle="true"><span class="icon-menu"></span></a></li>
+                </ul>
+                <a href="index.html" class="app-header-logo app-header-logo-light app-header-logo-condensed">Project</a>
+                <div class="app-header-navigation" >
                     <nav>
                         <ul>
-                            <li><a href="<?php echo base_url(); ?>"><span class="icon-home"></span>Home</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_transaksi"><span class="fa fa-money"></span>Data Transaksi</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_pembayaran"><span class="fa fa-usd"></span>Data Pembayaran</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_distance"><span class="fa fa-blind"></span>Data Distance</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_iklan"><span class="fa fa-adn"></span>Data Iklan</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_check"><span class="fa fa-check-square"></span>Data Check In</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_mobil"><span class="fa fa-truck"></span>Data Mobil</a></li>
-                            <li><a href="<?php echo base_url(); ?>a_wilayah"><span class="fa fa-street-view"></span>Data Wilayah</a></li>
-                            <li><a href="<?php echo base_url(); ?>users/view_users"><span class="fa fa-user"></span>Users</a></li>
+                            <li>
+                              <a href="<?php echo base_url(); ?>">Home</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>a_transaksi">Driver</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>a_iklan">Iklan</a>
+                            </li>
+                            <li>
+                              <a href="<?php echo base_url(); ?>a_perusahaan">Pengiklan</a>
+                            </li>
+                            <li>
+                              <a href="<?php echo base_url(); ?>a_pembayaran"> Pembayaran</a>
+                            </li>
+                            <li>
+                              <a> Data</a>
+                              <div class="app-header-navigation-megamenu">
+                              <div class="row">
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="list-group list-group-condensed">
+                                                <div class="list-group-title">Kendaraan</div>
+                                                <a href="<?php echo base_url(); ?>a_mobil" class="list-group-item">Data Kendaraan</a>
+                                                <a href="<?php echo base_url(); ?>a_tipe" class="list-group-item">Data Tipe Kendaraan</a>
+                                                <a href="<?php echo base_url(); ?>a_tahun" class="list-group-item">Data Tahun Kendaraan</a>
+                                                <a href="<?php echo base_url(); ?>a_warna" class="list-group-item">Data Warna Kendaraan</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="list-group list-group-condensed">
+                                                <div class="list-group-title">Wilayah</div>
+                                                <a href="<?php echo base_url(); ?>a_kota" class="list-group-item">Data Kota</a>
+                                                <a href="<?php echo base_url(); ?>a_wilayah" class="list-group-item">Data Wilayah</a>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                            </li>
+                            <li style="left: 115%;">
+                              <a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>
+                            </li>
                         </ul>
                     </nav>
-                </div>
-                <!-- END SIDEBAR -->
-
-                <!-- START APP CONTENT -->
-                <div class="app-content app-sidebar-left">
-                    <!-- START APP HEADER -->
-                    <div class="app-header">
-                        <ul class="app-header-buttons">
-                            <li class="visible-mobile"><a href="#" class="btn btn-link btn-icon" data-sidebar-toggle=".app-sidebar.dir-left"><span class="icon-menu"></span></a></li>
-                            <li class="hidden-mobile"><a href="#" class="btn btn-link btn-icon" data-sidebar-minimize=".app-sidebar.dir-left"><span class="icon-list"></span></a></li>
-                        </ul>
-                        <form class="app-header-search" action="" method="post">
-                            <input type="text" name="keyword" placeholder="Search">
-                        </form>
-                    </div>
+            </div>
+          </div>
+            <!-- END APP HEADER  -->
+            <!-- START APP CONTAINER -->
+            <div class="app-container">
                     <!-- END APP HEADER  -->
-
-                    <!-- START PAGE HEADING -->
-                    <!-- <div class="app-heading app-heading-bordered app-heading-page">
-                        <div class="icon icon-lg">
-                            <span class="icon-home"></span>
-                        </div>
-                        <div class="title">
-                            <h1>Blank</h1>
-                            <p>Subtitle</p>
-                        </div>
-                    </div>
-                    <div class="app-heading-container app-heading-bordered bottom">
-                        <ul class="breadcrumb">
-                            <li><a href="#">First level</a></li>
-                            <li class="active">Current</li>
-                        </ul>
-                    </div> -->
-                    <!-- END PAGE HEADING -->
+                    <?php if ($this->session->flashdata('delete_pembayaran')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_pembayaran').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_pembayaran')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_pembayaran').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_distance')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_distance').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_distance')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_distance').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_check')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_check').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_check')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_check').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_mobil')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_mobil').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_mobil')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_mobil').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_wilayah')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_wilayah').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_iklan')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_iklan').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_iklan')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_iklan').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_kota')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_kota').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_kota')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_kota').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_kota')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_kota').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_kota')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_kota').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_master_iklan')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_master_iklan').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_master_iklan')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_master_iklan').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_perusahaan')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_perusahaan').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_perusahaan')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_perusahaan').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('delete_transaksi')): ?>
+                      <?php echo '<div class="alert alert-danger alert-icon-block alert-dismissible" role="alert">
+                                        <div class="alert-icon">
+                                            <span class="icon-menu-circle"></span>
+                                        </div>
+                                        '.$this->session->flashdata('delete_transaksi').'
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                    </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_transaksi')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_transaksi').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_tahun')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_tahun').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_tipe')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_tipe').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('update_warna')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('update_warna').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>
+                    <?php if ($this->session->flashdata('user_loggedin')): ?>
+                      <?php echo '<div class="alert alert-success alert-icon-block alert-dismissible" role="alert">
+                                          <div class="alert-icon">
+                                              <span class="icon-checkmark-circle"></span>
+                                          </div>
+                                          '.$this->session->flashdata('user_loggedin').'
+                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="fa fa-times"></span></button>
+                                      </div>' ?>
+                    <?php endif; ?>

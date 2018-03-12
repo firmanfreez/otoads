@@ -22,10 +22,12 @@
                                           <tr>
                                             <td><?php echo $num++ ?></td>
                                             <td><?php echo $d['nama_lengkap']; ?></td>
-                                            <td>
-                                              <center><p><a class="btn btn-primary" href="<?php echo site_url('/a_distance/'.$d['id_distance']); ?>"><span class="fa fa-eye" ></span></a></p></center>
-                                              <center><p><a class="btn btn-info" href="<?php echo site_url('/a_distance/edit/'.$d['id_distance']); ?>"><span class="fa fa-pencil" ></span></a></p></center>
-                                              <center><p><a class="btn btn-danger" href="<?php echo site_url('/a_distance/delete/'.$d['id_distance']); ?>"><span class="fa fa-trash" ></span></a></p></center>
+                                            <td style="width: 23%;">
+                                            <center>
+                                            <a class="btn btn-primary" href="<?php echo site_url('/a_distance/'.$d['id_distance']); ?>"><span class="fa fa-eye" ></span></a>
+                                            <a class="btn btn-info" href="<?php echo site_url('/a_distance/edit/'.$d['id_distance']); ?>"><span class="fa fa-pencil" ></span></a>
+                                            <a class="btn btn-danger" href="<?php echo site_url('/a_distance/delete/'.$d['id_distance']); ?>"><span class="fa fa-trash" ></span></a>
+                                          </center>
                                             </td>
                                           </tr>
                                       <?php endforeach; ?>

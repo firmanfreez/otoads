@@ -1,10 +1,11 @@
 <!-- START PAGE CONTAINER -->
                     <div class="container">
-                      <div class="block block-condensed">
+                      <div class="block block-condensed block-info" style="border-top: 1px solid #4FB5DD">
                             <!-- START HEADING -->
-                            <div class="app-heading app-heading-small">
-                                    <center><h1><?= $title ?></h1></center>
+                            <div style="margin: 1% 2%;">
+                              <center><h2><?= $title ?></h2></center>
                             </div>
+                            <hr class="hr-border">
                             <!-- END HEADING -->
                             <div class="block-content">
                                 <table class="table table-striped table-bordered datatable-extended">
@@ -26,10 +27,11 @@
                                             <td><?php echo $p['nama_pemilik_rekening']; ?></td>
                                             <td><?php echo $p['nama_bank']; ?></td>
                                             <td><?php echo $p['nomor_rekening']; ?></td>
-                                            <td>
-                                              <p><a class="btn btn-info" href="<?php echo site_url('/a_pembayaran/edit/'.$p['id_pembayaran']); ?>"><span class="fa fa-pencil" ></span></a></p>
-                                              <p><a class="btn btn-danger" href="<?php echo site_url('/a_pembayaran/delete/'.$p['id_pembayaran']); ?>"><span class="fa fa-trash" ></span></a></p>
-                                                <!-- <?php echo form_open('/a_pembayaran/delete/'.$p['id_pembayaran']); ?><input type="submit" class="btn btn-danger" value="DELETE"></form> -->
+                                            <td style="width:20%;">
+                                              <center>
+                                            <a class="btn btn-info btn-xs" href="<?php echo site_url('/a_pembayaran/edit/'.$p['id_pembayaran']); ?>"><span class="fa fa-pencil" ></span></a>
+                                            <a class="btn btn-danger btn-xs" href="<?php echo site_url('/a_pembayaran/delete/'.$p['id_pembayaran']); ?>"><span class="fa fa-trash" ></span></a>
+                                          </center>
                                             </td>
                                           </tr>
                                       <?php endforeach; ?>

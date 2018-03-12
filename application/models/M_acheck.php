@@ -33,7 +33,8 @@ class M_acheck extends CI_Model{
       'f_samping_kiri' => $samping_kiri,
       'f_samping_kanan' => $samping_kanan,
       'f_belakang' => $belakang,
-      'f_speedometer' => $speedometer
+      'f_speedometer' => $speedometer,
+      'angka_speedometer' => $this->input->post('angka_speedometer')
     );
     $this->db->where('id_check', $this->input->post('id_check'));
     return $this->db->update('check_in', $data);
@@ -42,5 +43,10 @@ class M_acheck extends CI_Model{
       $this->db->order_by('nama_lengkap');
       $query = $this->db->get('data_transaksi');
       return $query->result_array();
+    }
+    public function delete($id_check){
+    $this->db->where('id_check', $id_check);
+    $this->db->delete('check_in');
+    return true;
     }
 }

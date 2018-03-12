@@ -2,6 +2,9 @@
 class A_distance extends CI_Controller{
 
   public function index(){
+    if (!$this->session->userdata('logged_in')) {
+      redirect('users/login');
+    }
     $data['title'] = 'DATA DISTANCE';
 
     $data['distance'] = $this->M_adistance->get_data();
@@ -11,6 +14,9 @@ class A_distance extends CI_Controller{
     $this->load->view('templates/footer');
   }
   public function detail($id_distance = NULL){
+    if (!$this->session->userdata('logged_in')) {
+      redirect('users/login');
+    }
     $data['distance'] = $this->M_adistance->get_data($id_distance);
 
     $id_distance = $data['distance']['id_distance'];
@@ -26,6 +32,9 @@ class A_distance extends CI_Controller{
     $this->load->view('templates/footer');
   }
   public function edit($id_distance){
+    if (!$this->session->userdata('logged_in')) {
+      redirect('users/login');
+    }
 
       $data['distance'] = $this->M_adistance->get_data($id_distance);
       $data['transaksi'] = $this->M_adistance->get_transaksi();
@@ -44,10 +53,12 @@ class A_distance extends CI_Controller{
     $total_perjalanan = $a + $b;
 
     $this->M_adistance->update_distance($total_perjalanan);
+    $this->session->set_flashdata('update_distance', 'Data Distance Berhasil di Edit');
     redirect('a_distance');
     }
     public function delete($id_distance){
       $this->M_adistance->delete($id_distance);
+      $this->session->set_flashdata('delete_distance', 'Data Distance Berhasil di Hapus');
     redirect('a_distance');
     }
 }
